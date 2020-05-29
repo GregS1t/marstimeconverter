@@ -1,0 +1,2 @@
+include *.md
+recursive-include marconverter MarsTimeConverterMatlab.m lmst2utc marsnow utc2lmst landercongig.xml LICENCE
