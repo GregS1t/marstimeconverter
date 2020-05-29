@@ -1,4 +1,4 @@
-# Mars Converter - Useful tools to convert UTC Time to/from Mars Time
+# Mars Time Converter - Useful tools to convert UTC Time to/from Mars Time
 
 ## Table of content
 1.  Version
@@ -27,12 +27,12 @@ on behalf InSight/SEIS collaboration.
 
 ## 3. What is it  ?
 
-Mars converter is a project used for InSight collaboration to convert UTC Time to/from Mars Time (LMST).
-Note that for moment, MarsConverter is only converting to LMST (Local Mars Solar Time).
+Mars Time Converter is a project developped for InSight collaboration to convert UTC Time to/from Mars Time (LMST).
+Note that for moment, MarsTimeConverter is only converting to LMST (Local Mars Solar Time).
 It's also made of additionnal scripts to ease your life.
 
 
-### 3.1 MarsConverter.py
+### 3.1 MarsTimeConverter.py
 
 Nothing much to say about the file. If you need implementation details see the 
 last section "How is it calculated ? "
@@ -57,7 +57,7 @@ from obspy import UTCDateTime
 ```
 
 ### 3.2 The configuration file: landerconfigfile.xml
-This file is an xml file with the following structure: 
+This file is an xml file with the following structure (example for the InSight Lander): 
 
 ```
 <configlanding>
@@ -83,7 +83,7 @@ $MARSCONVERTER is the path to the directory containing MarsConverter stuffs.
 Example : 
 
 ```
-export MARSCONVERTER=/Users/greg/ASPIC/marsconverter
+export MARSCONVERTER=paths/to/marstimeconverter
 export PYTHONPATH=$PYTHONPATH:$MARSCONVERTER
 export PATH=$PATH:$MARSCONVERTER
 ```
@@ -103,7 +103,7 @@ one open a new terminal.
 Example : 
 ```
 # Mars Converter
-export MARSCONVERTER=/Users/greg/ASPIC/marsconverter
+export MARSCONVERTER=path/to/marsconverter
 export PYTHONPATH="$MARSCONVERTER:$PYTHONPATH"
 
 bash marsnow
@@ -139,13 +139,13 @@ This program is the same as the python version.
 
 ### 4.1. Prerequisites
 
-Since MarsConverter has been developped in the same time as some other functions 
+Since MarsTimeConverter has been developped in the same time as some other functions 
 to analyse seismic signals from Mars, it is still dependant from obspy project. 
 So, you need to install it before using MarsConverter
 
 To install obspy : [https://github.com/obspy/obspy/wiki/Installation-via-Anaconda)](https://github.com/obspy/obspy/wiki/Installation-via-Anaconda)
 
-### 4.2 MarsConverter 
+### 4.2 MarsTimeConverter 
 
 You can either direclty **copy the files** wherever you want or **you can clone** this 
 repository on your computer to keep an active link and get updates if any, in 
@@ -155,27 +155,27 @@ the future.
 *  To clone : In a terminal, 
 
 ```
-git clone git@pss-gitlab.math.univ-paris-diderot.fr:sainton/marsconverter.git
+git clone git@github.com:GregS1t/marstimeconverter.git
 
 ```
 
 
-*  To download : click on the little clound to dowload. Then unzip or untar the archive.
+*  To download : click on the little cloud to download. Then unzip or untar the archive.
 
 ## 5. How to use it ?
 
 In the main part of the file and example is given: 
 
 ```
-print("Welcome in MarsConverter module.")
+print("Welcome in MarsTimeConverter module.")
 landerconfigfile = './landerconfig.xml'
 my_file = Path(landerconfigfile)
 
 ```
-One needs to create an instance of the class MarsConverter which will be used all
+One needs to create an instance of the class MarsTimeConverter which will be used all
 the time after
 ```
-mDate = MarsConverter(landerconfigfile)
+mDate = MarsTimeConverter(landerconfigfile)
 
 ```
 If no argument is given to the fonction get_utc_2_lmst(), it will convert current time to lmst
