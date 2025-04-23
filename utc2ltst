@@ -1,0 +1,57 @@
+#!/bin/bash
+#
+# @date   : 2022-01-04 (SOL 1105)
+# @author : Greg Sainton, IPGP
+
+# Simple shell script to convert UTC Date to LTST date
+# Based on the program utc2llst executed in Python
+
+# MARSCONVERTER environement variable must be set 
+# in your bash first. This variable must be the directory 
+# where to find marsnow, marsnow.py and the python class
+# MarsConverter.py
+
+#abort on error
+set -e
+
+function usage
+{
+    echo "usage: utc2ltst -d UTCDate "
+    echo "   ";
+    echo "  -d | --date              : UTC format date";
+    echo "  -h | --help              : This message";
+}
+
+function parse_args
+{
+  # positional args
+  args=()
+
+  # named args
+
+   case "$1" in
+       -d | --date )                 date="$2";               shift;;
+       -h | --help )                 usage;                   exit;; # quit and show usage
+       * )                           args+=("$1")             # if no match, add it to the positional args
+   esac
+
+  # restore positional args
+  set -- "${args[@]}"
+
+
+  # validate required args
+  if [[ -z "${date}" ]]; then
+      echo "Invalid arguments"
+      usage
+      exit;
+  fi
+
+}
+
+function run
+{
+  parse_args "$@"
+  if [ -z ${MARSCONVERTER} ]; then echo "MARSCONVERTER is unset"; else python $MARSCONVERTER/scripts/utc2ltst.py -d $date; fi
+}
+
+run "$@";

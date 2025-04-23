@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "marstimeconverter"
+version = "0.1.1"
+description = "Convert UTC time to Martian time (LMST, LTST, MSD, EOT, etc.) for different martian missions."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+
+authors = [
+  { name = "Gregory Sainton", email = "gregory.sainton@obspm.fr" }
+]
+
+keywords = [
+  "mars",
+  "martian time",
+  "utc",
+  "lmst",
+  "sol",
+  "planetology",
+  "seismology",
+  "time conversion"
+]
+
+dependencies = [
+  "numpy",
+]
+
+[project.urls]
+Homepage = "https://gitlab.obspm.fr/gsainton/marstimeconverter"
+Documentation = "https://gitlab.obspm.fr/gsainton/marstimeconverter/-/wikis"
+Source = "https://gitlab.obspm.fr/gsainton/marstimeconverter"
+Issues = "https://gitlab.obspm.fr/gsainton/marstimeconverter/-/issues"
+
+[project.scripts]
+mars-time = "marstimeconverter.cli:main"
+

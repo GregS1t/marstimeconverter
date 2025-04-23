@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# @date   : 2019-10-20 (SOL 319)
+# @author : Greg Sainton, IPGP
+
+# Simple shell script to get the LMST date of now
+# Based on the program marsnow executed in Python
+
+# MARSCONVERTER_SCRIPTS environement variable must be set
+# in your bash (or whatever shell you are using) first. 
+# This variable must be the directory
+# where to find marsnow, marsnow.py and the python class
+# MarsTimeConverter in the file marstimeconverter.py
+
+if [ -z "${MARSCONVERTER_SCRIPTS}" ]; then echo "MARSCONVERTER_SCRIPTS is unset"; else python "${MARSCONVERTER_SCRIPTS}/marsnow.py"; fi

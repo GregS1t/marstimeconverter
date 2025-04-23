@@ -1,0 +1,12 @@
+[init]
+	defaultBranch = none
+[fetch]
+	recurseSubmodules = false
+[credential]
+	interactive = never
+[gc]
+	autoDetach = false
+[transfer]
+	bundleURI = true
+[http "https://gitlab.obspm.fr"]
+	sslCAInfo = /home/gsainton/Documents/ARCHIVE_IPGP/01_MARS/marstimeconverter/builds/bzoxCnA6M/0/gsainton/marstimeconverter.tmp/CI_SERVER_TLS_CA_FILE

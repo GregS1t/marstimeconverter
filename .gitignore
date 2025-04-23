@@ -1,0 +1,67 @@
+# --------------------------------
+# Python bytecode & cache
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# --------------------------------
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyInstaller
+*.exe
+*.app
+*.dll
+
+# Wheel caches
+*.whl
+*.egg
+*.log
+
+# --------------------------------
+# Environments
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+env/
+
+# --------------------------------
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --------------------------------
+# Jupyter & notebooks
+.ipynb_checkpoints
+
+# --------------------------------
+# Pytest / coverage
+.cache/
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --------------------------------
+# PyPI token (NEVER commit this)
+.pypirc
+
+# --------------------------------
+# Mac / Linux / Windows system files
+.DS_Store
+Thumbs.db
+

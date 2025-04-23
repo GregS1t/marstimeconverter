@@ -1,0 +1,71 @@
+<configlandings>
+  <lander name="InSight">
+    <landingdate>2018-330T19:44:52.444</landingdate>
+    <landing_site>Elysium Planitia</landing_site>
+    <active>no</active>
+    <code_name>InSight</code_name>
+    <agency>NASA</agency>
+    <longitude>224.03</longitude>
+    <latitude>4.502384</latitude>
+    <solorigin ref="0">2018-330T05:10:50.3356</solorigin>
+    <lastsol>1688</lastsol>
+  </lander>
+  <lander name="Perseverance">
+    <landingdate>2021-02-18T20:55:00.000</landingdate>
+    <landing_site>Jezero Crater</landing_site>
+    <active>yes</active>
+    <code_name>Perseverance</code_name>
+    <agency>NASA</agency>
+    <longitude>282.7423</longitude>
+    <latitude>18.44</latitude>
+    <solorigin ref="0">2021-02-18T04:24:15.8058</solorigin>
+    <lastsol>ongoing</lastsol>
+  </lander>
+  <lander name="Curiosity">
+    <landingdate>2012-08-06T05:17:57.000</landingdate>
+    <landing_site>Gale Crater</landing_site>
+    <active>yes</active>
+    <code_name>Curiosity</code_name>
+    <agency>NASA</agency>
+    <longitude>137.4</longitude>
+    <latitude>-4.5895</latitude>
+    <solorigin ref="0">2012-08-05T13:49:59.000</solorigin>
+    <lastsol>ongoing</lastsol>
+  </lander>
+  <lander name="Opportunity">
+    <landingdate>2004-01-24T04:54:00.000</landingdate>
+    <landing_site>Meridiani Planum</landing_site>
+    <active>no</active>
+    <code_name>Opportunity</code_name>
+    <agency>NASA</agency>
+    <longitude>354.4741</longitude>
+    <latitude>-1.9483</latitude>
+    <solorigin ref="1">2004-01-24T15:09:00.000</solorigin>
+    <lastsol>5111</lastsol>
+  </lander>
+  <lander name="Spirit">
+    <landingdate>2004-01-04T04:26:00.000</landingdate>
+    <landing_site>Gusev Crater</landing_site>
+    <active>no</active>
+    <code_name>Spirit</code_name>
+    <agency>NASA</agency>
+    <longitude>175.47</longitude>
+    <latitude>-14.5718</latitude>
+    <solorigin ref="1">2004-01-03T13:36:16.000</solorigin>
+    <lastsol>2208</lastsol>
+  </lander>
+  <lander name="Mars">
+    <landingdate>2000-01-06T00:00:00.000</landingdate>
+    <landing_site>Reference Meridian</landing_site>
+    <active>no</active>
+    <code_name>Reference</code_name>
+    <agency>None</agency>
+    <longitude>0.0</longitude>
+    <latitude>0.0</latitude>
+    <solorigin ref="0">2000-01-06T00:00:00.000</solorigin>
+    <lastsol>ongoing</lastsol>
+  </lander>
+
+
+</configlandings>
+
