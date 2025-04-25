@@ -2,5 +2,4 @@ sphinx>=7.0
 sphinx_rtd_theme
 myst-parser
 sphinx-autodoc-typehints
-sphinx.ext.napoleon
 
