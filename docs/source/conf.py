@@ -12,7 +12,7 @@ sys.path.insert(0, os.path.abspath('../..'))
 
 try:
     import marstimeconverter
-    release = marstimeconverter.__version__
+    release = '0.1.0'
 except ModuleNotFoundError:
     release = 'dev'
 
