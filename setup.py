@@ -18,7 +18,7 @@ setup(
         "utc2lmst = marstimeconverter.cli.utc2lmst:main",
         "lmst2utc = marstimeconverter.cli.lmst2utc:main",
     ]
-    }
+    },
 
     classifiers=[
         'Programming Language :: Python :: 3',
