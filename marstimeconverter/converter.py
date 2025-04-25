@@ -15,7 +15,7 @@ CONFIG_PATH = os.getenv('MARSCONVERTER')
 if not CONFIG_PATH:
     raise EnvironmentError("Environment variable 'MARSCONVERTER' not set. Please set it appropriately.")
 
-DEFAULT_CONFIG_FILE = os.path.join(CONFIG_PATH, "marstimeconverter",
+DEFAULT_CONFIG_FILE = os.path.join(CONFIG_PATH, "mars-time-converter",
                                    "CONFIG", "mission_config_file.xml")
 
 class MarsTimeConverter:

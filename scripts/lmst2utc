@@ -3,24 +3,24 @@
 # @date   : 2019-10-21 (SOL 320)
 # @author : Greg Sainton, IPGP
 
-# Simple shell script to convert UTC Date to LMST date
-# Based on the program utc2lmst executed in Python
+# Simple shell script to convert LMST date to UTC Date Time
+# Based on the program lmst2utc executed in Python
 
 # MARSCONVERTER_SCRIPTS environement variable must be set
 # in your bash (or whatever shell you are using) first. 
 # This variable must be the directory
-# where to find utc2lmst, utc2lmst.py and the python class
+# where to find lmst2utc, lmst2utc.py and the python class
 # MarsTimeConverter in the file marstimeconverter.py
-
 
 #abort on error
 set -e
 
 function usage
 {
-    echo "usage: utc2lmst -d UTCDate "
+    echo "usage: lmst2utc -d UTCDate "
     echo "   ";
-    echo "  -d | --date              : UTC format date";
+    echo "  -d | --date              : LMST format date (SSSSTHH:MM:ss:mmmmmm)";
+    echo "                                       please add microsecond      )";
     echo "  -h | --help              : This message";
 }
 
@@ -53,7 +53,7 @@ function parse_args
 function run
 {
   parse_args "$@"
-  if [ -z "${MARSCONVERTER_SCRIPTS}" ]; then echo "MARSCONVERTER_SCRIPTS is unset"; else python "$MARSCONVERTER_SCRIPTS/utc2lmst.py" -d $date; fi
+  if [ -z "${MARSCONVERTER_SCRIPTS}" ]; then echo "MARSCONVERTER_SCRIPTS is unset"; else python "${MARSCONVERTER_SCRIPTS}/marstimeconverter/cli/lmst2utc.py" -d $date; fi
 }
 
 run "$@";

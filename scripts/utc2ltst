@@ -51,7 +51,7 @@ function parse_args
 function run
 {
   parse_args "$@"
-  if [ -z ${MARSCONVERTER} ]; then echo "MARSCONVERTER is unset"; else python $MARSCONVERTER/scripts/utc2ltst.py -d $date; fi
+  if [ -z ${MARSCONVERTER} ]; then echo "MARSCONVERTER is unset"; else python $MARSCONVERTER/martimeconverter/cli/utc2ltst.py -d $date; fi
 }
 
 run "$@";

@@ -12,4 +12,4 @@
 # where to find marsnow, marsnow.py and the python class
 # MarsTimeConverter in the file marstimeconverter.py
 
-if [ -z "${MARSCONVERTER_SCRIPTS}" ]; then echo "MARSCONVERTER_SCRIPTS is unset"; else python "${MARSCONVERTER_SCRIPTS}/marsnow.py"; fi
+if [ -z "${MARSCONVERTER_SCRIPTS}" ]; then echo "MARSCONVERTER_SCRIPTS is unset"; else python "${MARSCONVERTER_SCRIPTS}/marstimeconverter/cli/marsnow.py"; fi
