@@ -11,7 +11,11 @@ from marstimeconverter.helpers import deprecated
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Improved configuration handling
-CONFIG_PATH = os.getenv('MARSCONVERTER')
+CONFIG_PATH = os.getenv(
+    'MARSCONVERTER',
+    os.path.join(os.path.dirname(__file__), '..', 'CONFIG')
+)
+
 if not CONFIG_PATH:
     raise EnvironmentError("Environment variable 'MARSCONVERTER' not set. Please set it appropriately.")
 
