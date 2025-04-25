@@ -10,13 +10,16 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('../..'))
 
-import marstimeconverter
-
+try:
+    import marstimeconverter
+    release = marstimeconverter.__version__
+except ModuleNotFoundError:
+    release = 'dev'
 
 project = 'Mars Time Converter'
 copyright = '2025, Grégory Sainton'
 author = 'Grégory Sainton'
-release = '1.0.0'
+
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration

@@ -35,6 +35,3 @@ Documentation = "https://gitlab.obspm.fr/gsainton/marstimeconverter/-/wikis"
 Source = "https://gitlab.obspm.fr/gsainton/marstimeconverter"
 Issues = "https://gitlab.obspm.fr/gsainton/marstimeconverter/-/issues"
 
-[project.scripts]
-mars-time = "marstimeconverter.cli:main"
-
